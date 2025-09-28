@@ -20,7 +20,8 @@ defmodule Eidolon.MixProject do
   defp deps do
     [
       {:toml, "~> 0.7.0"},
-      {:myxql, "~> 0.6"}
+      {:myxql, "~> 0.6"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 end
