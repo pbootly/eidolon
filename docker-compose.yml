@@ -1,0 +1,59 @@
+services:
+  db1:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33061:3306"
+    volumes:
+      - ./seed/matching.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db2:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33062:3306"
+    volumes:
+      - ./seed/matching.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db3:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33063:3306"
+    volumes:
+      - ./seed/mixed_a.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db4:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33064:3306"
+    volumes:
+      - ./seed/mixed_b.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db5:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33065:3306"
+    volumes:
+      - ./seed/missing.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db6:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: testdb
+    ports:
+      - "33066:3306"
+
