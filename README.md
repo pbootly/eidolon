@@ -20,7 +20,7 @@ password = "rootpass"
 
 ## Invokation
 ```sh
-elixir runner.exs your_config.toml 
+elixir eidolon.exs your_config.toml 
 ```
 
 ## Try it out with Docker Compose
@@ -32,5 +32,5 @@ docker compose up -d
 Then run the comparison:
 
 ```sh
-elixir runner.exs compose-test.toml
+elixir eidolon.exs compose-test.toml
 ```
